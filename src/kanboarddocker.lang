@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "kanboarddocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[zh-cn]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard 是简单自建的项目管理工具，基于看板：创建看板、列与泳道，拖动任务流转，添加子任务、评论、附件与工时记录，并给每个用户分配权限。使用应用数据目录里的本地 SQLite 数据库，不需要外部数据库。"
+release_note = "1. 首个版本：基于 Docker Hub 的 Kanboard 1.2.57，以非 root 容器运行。看板式项目管理，SQLite 存储保存在应用数据目录。"
+important    = "需要 DockerEngine（缺失时应用中心会自动安装）。首次访问会显示登录页——默认 admin/admin，请立刻修改。看板、任务、附件与 SQLite 数据库都在 DockerAppData/kanboarddocker/data；插件可以放进 .../plugins。界面为纯 HTTP，暴露到公网前请配置带 TLS 的反向代理。"
+
+[zh-hk]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard 是簡單自建的專案管理工具，基於看板：建立看板、欄與泳道，拖動任務流轉，新增子任務、留言、附件與工時記錄，並給每個使用者分配權限。使用應用資料目錄裡的本機 SQLite 資料庫，不需要外部資料庫。"
+release_note = "1. 首個版本：基於 Docker Hub 的 Kanboard 1.2.57，以非 root 容器運行。看板式專案管理，SQLite 儲存保存在應用資料目錄。"
+important    = "需要 DockerEngine（缺少時應用中心會自動安裝）。首次存取會顯示登入頁——預設 admin/admin，請立刻修改。看板、任務、附件與 SQLite 資料庫都在 DockerAppData/kanboarddocker/data；插件可以放進 .../plugins。介面為純 HTTP，公開到互聯網前請配置帶 TLS 的反向代理。"
+
+[fr-fr]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[de-de]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[it-it]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[es-es]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[hu-hu]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[ja-jp]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[ko-kr]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[pl-pl]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[ru-ru]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[tr-tr]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[pt-pt]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[ar-sa]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[cs-cz]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[he-il]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[id-id]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[nb-no]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[nl-nl]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[sv-se]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[th-th]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[vi-vn]
+name         = "Kanboard"
+auth         = "kanboard"
+version      = "@@VERSION@@"
+descript     = "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database."
+release_note = "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+

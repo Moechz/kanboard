@@ -1,0 +1,118 @@
+{
+  "app_id": "kanboarddocker",
+  "title": "Kanboard",
+  "image": "kanboard/kanboard:v1.2.57",
+  "repo_name": "kanboard",
+  "mode": "wrapper",
+  "container_port": 8080,
+  "category": [
+    "Development_Tools"
+  ],
+  "volumes": [
+    {
+      "host": "/Volume1/DockerAppData/kanboarddocker/data",
+      "container": "/var/www/app/data"
+    },
+    {
+      "host": "/Volume1/DockerAppData/kanboarddocker/plugins",
+      "container": "/var/www/app/plugins"
+    }
+  ],
+  "env": {
+    "TZ": "Asia/Shanghai"
+  },
+  "auth": "kanboard",
+  "upstream_url": "https://github.com/kanboard/kanboard",
+  "upstream_license": "MIT",
+  "descript": "Kanboard is a simple, self-hosted project management tool based on Kanban boards: create boards, column and swimlanes, drag tasks through the workflow, add subtasks, comments, attachments and time tracking, and give each user their own access. It uses a local SQLite database in the application data folder and needs no external database.",
+  "release_note": "1. First release: Kanboard 1.2.57 from Docker Hub as a non-root container. Kanban project management with SQLite storage in the application data folder.",
+  "important": "Requires DockerEngine (installed automatically if missing). The first visit shows the login page - default admin/admin, change it immediately. Boards, tasks, attachments and the SQLite database live in DockerAppData/kanboarddocker/data; plugins can be dropped into .../plugins. Plain HTTP; use a TLS reverse proxy before exposing it to the internet.",
+  "probe": {
+    "user_in_image": "(root)",
+    "entrypoint": [
+      "/usr/local/bin/entrypoint.sh"
+    ],
+    "cmd": null,
+    "exposed_ports": [
+      80,
+      443
+    ],
+    "declared_volumes": [
+      "/etc/nginx/ssl",
+      "/var/www/app/data",
+      "/var/www/app/plugins"
+    ],
+    "image_healthcheck": [
+      "CMD-SHELL",
+      "curl -f http://localhost/healthcheck.php || exit 1"
+    ],
+    "digest": "kanboard/kanboard@sha256:637989624e5362af2b97bfb4be1936fb6b111ea7cbdffea0ae8bd3068dc84125",
+    "architecture": "x86_64",
+    "platforms": [
+      "x86_64",
+      "aarch64"
+    ],
+    "http_client_in_image": "curl",
+    "trial_run": {
+      "ok": false,
+      "http_code": "",
+      "state": "exited",
+      "paths": [],
+      "host_port": 18000,
+      "log_tail": "..+....+......+......+...+......+..+.............+..+.........+++++++++++++++++++++++++++++++++++++++*........+...+.........+....+.........+...+++++++++++++++++++++++++++++++++++++++*...+......+...+.+...............+..+...+.+........+.......+...+............+........+...+.......+...+.....+...+.+.....+......+...+.........+...+....+........+.+......+...+.................+...............+...+.+.....+....+..................+.....+.......+..+.+...+..+.......+.....+.+.........+...........+.+...+..+.........................+......+............+......+............+..................+............+.........+.....+...+.......+.........+.....+.+...+..++++++\n.+++++++++++++++++++++++++++++++++++++++*..+..+..................+.......+.....+.+......+.....+......+...+++++++++++++++++++++++++++++++++++++++*........+...+..++++++\n-----\nchown: /var/www/app/data: Operation not permitted\nchown: /var/www/app/data: Operation not permitted\nchown: /var/www/app/plugins: Operation not permitted\nchown: /var/www/app/plugins: Operation not permitted\ns6-svscan: fatal: unable to open .s6-svscan/lock: Permission denied",
+      "files_in_mounts": "/tmp/tosdocker-trial-1794741190/etc_nginx_ssl/kanboard.crt\n/tmp/tosdocker-trial-1794741190/etc_nginx_ssl/kanboard.key"
+    },
+    "docker_hub": {},
+    "github": {
+      "owner": "kanboard",
+      "repo": "kanboard",
+      "description": "Kanban project management software",
+      "license": "MIT",
+      "homepage": "https://kanboard.org"
+    }
+  },
+  "healthcheck": [
+    "CMD-SHELL",
+    "grep -q ':1F90' /proc/net/tcp6 || grep -q ':1F90' /proc/net/tcp"
+  ],
+  "entrypoint_file": "src/entrypoint.sh",
+  "platform": "x86_64",
+  "user": "1000:1000",
+  "publisher": "Moechz",
+  "compose_project": "kanboarddocker",
+  "github_repo": "kanboard",
+  "upstream_version": "1.2.57",
+  "release_tag_prefix": "v",
+  "version": "1.2.57-1",
+  "help": "https://github.com/Moechz/kanboard/issues",
+  "official": "https://github.com/kanboard/kanboard",
+  "license": "MIT",
+  "docker_socket": false,
+  "group_add": [],
+  "host_port": 8173,
+  "healthcheck_start_period": "30s",
+  "wrapper_note": "the image runs Apache on port 80, which uid 1000 cannot bind. This wrapper runs\nthe same PHP application with the built-in PHP web server on port 8080 and keeps\nthe SQLite database and plugins on the mounted volumes.",
+  "wrapper_note_readme": "- **Entrypoint wrapper**: serves the app with `php -S 0.0.0.0:8080` (the image's Apache binds 80, unusable as uid 1000) and keeps `data/` and `plugins/` on the volumes.",
+  "translations": {
+    "zh-cn": {
+      "descript": "Kanboard 是简单自建的项目管理工具，基于看板：创建看板、列与泳道，拖动任务流转，添加子任务、评论、附件与工时记录，并给每个用户分配权限。使用应用数据目录里的本地 SQLite 数据库，不需要外部数据库。",
+      "important": "需要 DockerEngine（缺失时应用中心会自动安装）。首次访问会显示登录页——默认 admin/admin，请立刻修改。看板、任务、附件与 SQLite 数据库都在 DockerAppData/kanboarddocker/data；插件可以放进 .../plugins。界面为纯 HTTP，暴露到公网前请配置带 TLS 的反向代理。",
+      "release_note": "1. 首个版本：基于 Docker Hub 的 Kanboard 1.2.57，以非 root 容器运行。看板式项目管理，SQLite 存储保存在应用数据目录。"
+    },
+    "zh-hk": {
+      "descript": "Kanboard 是簡單自建的專案管理工具，基於看板：建立看板、欄與泳道，拖動任務流轉，新增子任務、留言、附件與工時記錄，並給每個使用者分配權限。使用應用資料目錄裡的本機 SQLite 資料庫，不需要外部資料庫。",
+      "important": "需要 DockerEngine（缺少時應用中心會自動安裝）。首次存取會顯示登入頁——預設 admin/admin，請立刻修改。看板、任務、附件與 SQLite 資料庫都在 DockerAppData/kanboarddocker/data；插件可以放進 .../plugins。介面為純 HTTP，公開到互聯網前請配置帶 TLS 的反向代理。",
+      "release_note": "1. 首個版本：基於 Docker Hub 的 Kanboard 1.2.57，以非 root 容器運行。看板式專案管理，SQLite 儲存保存在應用資料目錄。"
+    }
+  },
+  "data_notes": "`/var/www/app/data` (mounted from `DockerAppData/kanboarddocker/data`) holds `db.sqlite`, attachments and the uploaded files; `/var/www/app/plugins` holds plugins.",
+  "design_notes": [
+    "**PHP built-in server.** Apache binds port 80, which uid 1000 cannot use; `php -S` serves the same app on 8080.",
+    "**SQLite only.** No database server; boards and tasks live in one file."
+  ],
+  "limitations": [
+    "- The built-in PHP server is single-threaded; fine for small teams, not for heavy load.",
+    "- Default admin/admin must be changed after the first login.",
+    "- The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+  ]
+}
